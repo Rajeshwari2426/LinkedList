@@ -122,8 +122,29 @@ namespace LinkedList
             Console.WriteLine("\n{0} deleted ", deleteNode);
             return deleteNode;
         }
-
-
+        //method to delete last element
+        public int DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                Console.WriteLine("linked list empty");
+                return 0;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return 0;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            int lastDeleteNode = newNode.next.data;
+            newNode.next = null;
+            Console.WriteLine("\n{0} deleted ", lastDeleteNode);
+            return lastDeleteNode;
+        }
 
 
     }

@@ -17,8 +17,8 @@ namespace LinkedList
             customLinkedList.AddNode(70);
           //  customLinkedList.InsertAtParticularPosition(2, 30);
         
-         customLinkedList.DeleteFirstNode();
-         
+        // customLinkedList.DeleteFirstNode();
+         customLinkedList.DeleteLastNode();
             customLinkedList.Display();
             Console.ReadLine();
         }
