@@ -145,7 +145,23 @@ namespace LinkedList
             Console.WriteLine("\n{0} deleted ", lastDeleteNode);
             return lastDeleteNode;
         }
-
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    Console.WriteLine("\n{0} is  present", value);
+                    return count;
+                }
+                node = node.next;
+                count++; 
+            }           
+            Console.WriteLine("\n{0} is not present", value);
+            return count;
+        }
 
     }
 }

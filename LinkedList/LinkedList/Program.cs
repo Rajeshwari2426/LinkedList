@@ -15,10 +15,12 @@ namespace LinkedList
             customLinkedList.AddNode(56);
             customLinkedList.AddNode(30);
             customLinkedList.AddNode(70);
-          //  customLinkedList.InsertAtParticularPosition(2, 30);
-        
-        // customLinkedList.DeleteFirstNode();
-         customLinkedList.DeleteLastNode();
+            //  customLinkedList.InsertAtParticularPosition(2, 30);
+
+            // customLinkedList.DeleteFirstNode();
+            // customLinkedList.DeleteLastNode();
+             customLinkedList.Search(70);
+           
             customLinkedList.Display();
             Console.ReadLine();
         }
