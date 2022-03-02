@@ -12,9 +12,9 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to LinkedList program");
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.AddNode(56);
-            customLinkedList.AddNode(30);
-            customLinkedList.AddNode(76);
+            customLinkedList.AddInReverseOrder(70);
+            customLinkedList.AddInReverseOrder(30);
+            customLinkedList.AddInReverseOrder(56);
             customLinkedList.Display();
             Console.ReadLine();
         }
