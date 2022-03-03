@@ -23,6 +23,8 @@ namespace LinkedList
             int position = customLinkedList.Search(30);
             position++;
             customLinkedList.InsertAtParticularPosition(position, 40);
+            int position1 = customLinkedList.Search(40);
+            customLinkedList.DeleteNodeAtParticularPosition(position1);
 
             customLinkedList.Display();
             Console.ReadLine();

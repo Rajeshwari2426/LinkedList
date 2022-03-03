@@ -145,6 +145,7 @@ namespace LinkedList
             Console.WriteLine("\n{0} deleted ", lastDeleteNode);
             return lastDeleteNode;
         }
+        //method to search an element
         internal int Search(int value)
         {
             Node node = this.head;
@@ -189,6 +190,52 @@ namespace LinkedList
             prev.next = newestNode;
             Console.WriteLine("\n{0} inserted ", data);
             return this.head;
+        }
+        //method to delete an element at a particular position
+        internal void DeleteNodeAtParticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Console.WriteLine("\n node deleted ");
+            Size();
+        }
+        //method to find size of linked list i.e.,no of elements present
+        internal void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("\nLength of LinkedList is :-" + " " + count);
         }
     }
 }
