@@ -19,8 +19,11 @@ namespace LinkedList
 
             // customLinkedList.DeleteFirstNode();
             // customLinkedList.DeleteLastNode();
-             customLinkedList.Search(70);
-           
+            // customLinkedList.Search(70);
+            int position = customLinkedList.Search(30);
+            position++;
+            customLinkedList.InsertAtParticularPosition(position, 40);
+
             customLinkedList.Display();
             Console.ReadLine();
         }

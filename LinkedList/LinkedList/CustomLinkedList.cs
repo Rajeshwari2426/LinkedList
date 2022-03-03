@@ -76,8 +76,8 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted into the Append linked list", node.data);
         }
-        //method to insert element at particular position
-        internal Node InsertAtParticularPosition(int position, int data)
+        //method to insert element 
+        internal Node Insert(int position, int data)
         {
             if (position < 1)
                 Console.WriteLine("Invalid position");
@@ -162,6 +162,33 @@ namespace LinkedList
             Console.WriteLine("\n{0} is not present", value);
             return count;
         }
-
+        //method to add an element at a particular position
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            Console.WriteLine("\n{0} inserted ", data);
+            return this.head;
+        }
     }
 }
