@@ -16,16 +16,19 @@ namespace LinkedList
             customLinkedList.AddNode(30);
             customLinkedList.AddNode(70);
             //  customLinkedList.InsertAtParticularPosition(2, 30);
-
             // customLinkedList.DeleteFirstNode();
             // customLinkedList.DeleteLastNode();
             // customLinkedList.Search(70);
             int position = customLinkedList.Search(30);
             position++;
             customLinkedList.InsertAtParticularPosition(position, 40);
-            int position1 = customLinkedList.Search(40);
-            customLinkedList.DeleteNodeAtParticularPosition(position1);
-
+            //int position1 = customLinkedList.Search(40);
+            //customLinkedList.DeleteNodeAtParticularPosition(position1);
+            Console.WriteLine("created a sorted linked list in acsending order");           
+            Console.WriteLine("Before Sorting ");
+            customLinkedList.Display();
+            Console.WriteLine("\nAfter Sorting");
+            customLinkedList.sortList();
             customLinkedList.Display();
             Console.ReadLine();
         }
